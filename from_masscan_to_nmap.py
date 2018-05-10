@@ -30,14 +30,14 @@ for element in wtf:
             print ("I found printer at "+str(element)+" with port " + str(flag))
         else:
             if options['add_auth_and_safe_scripts']:
-                string= str("nmap -sT -sV --version-all -n --script '(default or safe or auth) and not (broadcast-listener or broadcast-ping or eap-info or targets-asn)' --max-rate 15000 -Pn -T4 -oA results/"+element+" "+element+" -p"+str(wtf[element]).replace("['","").replace("']","").replace("'","").replace(" ",""))
+                string= str("nmap -sT -sV --version-all -n --script '(default or safe or auth) and not (broadcast-listener or broadcast-ping or eap-info or targets-asn or reverse-index)' --max-rate 15000 -Pn -T4 -oA results/"+element+" "+element+" -p"+str(wtf[element]).replace("['","").replace("']","").replace("'","").replace(" ",""))
             else:
                 string = str("nmap -sT -sV --version-all -sC --max-rate 15000 -Pn -T4 -oA results/" + element + " " + element + " -p" + str(wtf[element]).replace("['", "").replace("']", "").replace("'", "").replace(" ", ""))
             #print string
 	    os.system(string)
     else:
         if options['add_auth_and_safe_scripts']:
-           string= str("nmap -sT -sV --version-all -n --script '(default or safe or auth) and not (broadcast-listener or broadcast-ping or eap-info or targets-asn)' --max-rate 15000 -Pn -T4 -oA results/"+element+" "+element+" -p"+str(wtf[element]).replace("['","").replace("']","").replace("'","").replace(" ",""))
+           string= str("nmap -sT -sV --version-all -n --script '(default or safe or auth) and not (broadcast-listener or broadcast-ping or eap-info or targets-asn or reverse-index)' --max-rate 15000 -Pn -T4 -oA results/"+element+" "+element+" -p"+str(wtf[element]).replace("['","").replace("']","").replace("'","").replace(" ",""))
         else:
             string = str("nmap -sT -sV --version-all -sC --max-rate 15000 -Pn -T4 -oA results/" + element + " " + element + " -p" + str(wtf[element]).replace("['", "").replace("']", "").replace("'", "").replace(" ", ""))
         #print string
