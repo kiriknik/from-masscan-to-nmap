@@ -92,5 +92,3 @@ else:
     xmlDifference (xmlFile1, xmlFile2)
 if not os.path.isdir('results'):os.system('mkdir results')
 
-
-
