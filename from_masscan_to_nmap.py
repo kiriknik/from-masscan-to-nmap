@@ -5,7 +5,7 @@ import argparse
 parser = argparse.ArgumentParser(add_help=True, description='From masscan XML to nmap scan')
 parser.add_argument('-x', '--xml', required=False, help='Path to masscan XML')
 parser.add_argument('-n', '--no_printer_scan', required=False, help='Please,dont scan printer (only to one xml)',action='store_true', default=False)
-parser.add_argument('-a','--add_auth_and_safe_scripts',required=False, help='Please,dont scan printer (only to one xml)',action='store_true', default=False)
+parser.add_argument('-a','--add_auth_and_safe_scripts',required=False, help='Add another scripts to scan',action='store_true', default=False)
 parser.add_argument('-x1', '--xml1', required=False, help='Compare 1 xml')
 parser.add_argument('-x2', '--xml2', required=False, help='Compare 1 xml')
 
